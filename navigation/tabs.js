@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
-import { Home } from "../screens"
+import Home from "../screens/Home"
 import { COLORS, FONTS, icons } from "../constants"
 import TabBarButton from "./TabBarButton";
 
@@ -88,7 +88,7 @@ const Tabs = () => {
                                 source={icons.transaction}
                                 resizeMode='contain'
                                 style={styles.tabIcon, {
-                                    tintColor: focused ? COLORS.primary : COLORS.white
+                                    tintColor: COLORS.white
                                 }}
                             />
                     ),
