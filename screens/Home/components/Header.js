@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import { images, icons, SIZES } from '../../../constants';
+import { shadow } from '../../../styles/index';
 import HeaderContent from './HeaderContent';
 import TrendingList from './TrendingList';
 
@@ -9,15 +10,7 @@ const Header = ({trending}) => {
     header: {
       width: '100%',
       height: 290,
-      shadowColor: "#000",
-      shadowOffset: {
-          width: 0,
-          height: 4,
-      },
-      shadowOpacity: 0.30,
-      shadowRadius: 4.65,
-
-      elevation: 8,
+      ...shadow,
     },
     imgBg: {
       flex: 1,

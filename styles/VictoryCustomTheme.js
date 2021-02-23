@@ -49,6 +49,20 @@ const centeredLabelStyles = assign({ textAnchor: "middle" }, baseLabelStyles);
 const strokeDasharray = "5, 5";
 const strokeLinecap = "round";
 const strokeLinejoin = "round";
+// *
+// * Shadow
+// *
+export const shadow = {
+    shadowColor: "#000",
+      shadowOffset: {
+          width: 0,
+          height: 4,
+      },
+      shadowOpacity: 0.30,
+      shadowRadius: 4.65,
+
+      elevation: 8,
+}
 
 export default {
     chart: baseProps,

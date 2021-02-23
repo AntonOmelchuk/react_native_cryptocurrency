@@ -4,7 +4,7 @@ import { COLORS, FONTS, SIZES } from '../../../constants'
 
 const TrendingItem = ({value}) => {
   const {item, index} = value;
-  const {code, image, currency} = item;
+  const {code, image, currency, amount, changes, type} = item;
 
   const styles = StyleSheet.create({
     container: {
@@ -27,12 +27,19 @@ const TrendingItem = ({value}) => {
     info: {
       marginLeft: SIZES.base
     },
-    currency: {
+    h2: {
       ...FONTS.h2
     },
     code: {
       color: COLORS.gray,
       ...FONTS.body3
+    },
+    footer: {
+      marginTop: SIZES.radius
+    },
+    changes: {
+      color: type === 'I' ? COLORS.green : COLORS.red,
+      ...FONTS.h3
     }
   })
   return (
@@ -45,10 +52,14 @@ const TrendingItem = ({value}) => {
           />
         </View>
         <View style={styles.info}>
-          <Text style={styles.currency}>{currency}</Text>
+          <Text style={styles.h2}>{currency}</Text>
           <Text style={styles.code}>{code}</Text>
         </View>
       </View>
+      <View style={styles.footer}>
+          <Text style={styles.h2}>${amount}</Text>
+          <Text style={styles.changes}>{changes}</Text>
+        </View>
     </TouchableOpacity>
   )
 }
