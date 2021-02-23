@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import { COLORS, SIZES, FONTS, icons} from '../../constants'
 import { shadow } from '../../styles/VictoryCustomTheme'
 
-const  PriceAlert = ({customContainerStyle}) => {
+const PriceAlert = ({customContainerStyle}) => {
   const styles = StyleSheet.create({
     container: {
       flexDirection: 'row',
