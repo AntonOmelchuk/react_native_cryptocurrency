@@ -1,11 +1,14 @@
 import React from 'react';
-import { View, StyleSheet, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import {
+  View, StyleSheet, ImageBackground, Image, TouchableOpacity
+} from 'react-native';
 import { images, icons, SIZES } from '../../../constants';
-import { shadow } from '../../../styles/index';
+import { shadow } from '../../../styles/VictoryCustomTheme';
+
 import HeaderContent from './HeaderContent';
 import TrendingList from './TrendingList';
 
-const Header = ({trending}) => {
+const Header = ({ trending }) => {
   const styles = StyleSheet.create({
     header: {
       width: '100%',
@@ -33,7 +36,7 @@ const Header = ({trending}) => {
       flex: 1,
       resizeMode: 'contain'
     },
-  })
+  });
 
   return (
     <View style={styles.header}>
@@ -44,19 +47,19 @@ const Header = ({trending}) => {
         <View style={styles.headerBar}>
           <TouchableOpacity
             style={styles.headerBtn}
-            onPresee={() => console.log('on press')}
-            >
-              <Image
-                source={icons.notification_white}
-                style={styles.icon}
-              />
+            onPresee={() => {}}
+          >
+            <Image
+              source={icons.notification_white}
+              style={styles.icon}
+            />
           </TouchableOpacity>
         </View>
         <HeaderContent />
         <TrendingList trending={trending} />
       </ImageBackground>
     </View>
-  )
-}
+  );
+};
 
 export default Header;

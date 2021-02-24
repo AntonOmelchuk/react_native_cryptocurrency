@@ -1,9 +1,11 @@
-import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import React from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { COLORS } from '../constants';
 
-const TabBarButton = ({children, onPress}) => {
+const TabBarButton = ({ props }) => {
+  const { children, onPress } = props;
+
   const styles = StyleSheet.create({
     container: {
       top: -30,
@@ -11,8 +13,8 @@ const TabBarButton = ({children, onPress}) => {
       alignItems: 'center',
       shadowColor: COLORS.primary,
       shadowOffset: {
-          width: 0,
-          height: 10,
+        width: 0,
+        height: 10,
       },
       shadowOpacity: 0.25,
       shadowRadius: 3.84,
@@ -24,17 +26,20 @@ const TabBarButton = ({children, onPress}) => {
       height: 70,
       borderRadius: 35,
     },
-  })
+  });
 
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <LinearGradient colors={[
-        COLORS.primary, COLORS.secondary
-      ]} style={styles.gradient}>
+      <LinearGradient
+        colors={[
+          COLORS.primary, COLORS.secondary
+        ]}
+        style={styles.gradient}
+      >
         {children}
       </LinearGradient>
     </TouchableOpacity>
-  )
-}
+  );
+};
 
-export default TabBarButton
+export default TabBarButton;

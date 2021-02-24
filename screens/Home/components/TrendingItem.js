@@ -1,10 +1,14 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
-import { COLORS, FONTS, SIZES } from '../../../constants'
+import React from 'react';
+import {
+  View, Text, Image, StyleSheet, TouchableOpacity
+} from 'react-native';
+import { COLORS, FONTS, SIZES } from '../../../constants';
 
-const TrendingItem = ({value}) => {
-  const {item, index} = value;
-  const {code, image, currency, amount, changes, type} = item;
+const TrendingItem = ({ value }) => {
+  const { item, index } = value;
+  const {
+    code, image, currency, amount, changes, type
+  } = item;
 
   const styles = StyleSheet.create({
     container: {
@@ -41,7 +45,7 @@ const TrendingItem = ({value}) => {
       color: type === 'I' ? COLORS.green : COLORS.red,
       ...FONTS.h3
     }
-  })
+  });
   return (
     <TouchableOpacity style={styles.container}>
       <View style={styles.row}>
@@ -57,11 +61,14 @@ const TrendingItem = ({value}) => {
         </View>
       </View>
       <View style={styles.footer}>
-          <Text style={styles.h2}>${amount}</Text>
-          <Text style={styles.changes}>{changes}</Text>
-        </View>
+        <Text style={styles.h2}>
+          $
+          {amount}
+        </Text>
+        <Text style={styles.changes}>{changes}</Text>
+      </View>
     </TouchableOpacity>
-  )
-}
+  );
+};
 
-export default TrendingItem
+export default TrendingItem;

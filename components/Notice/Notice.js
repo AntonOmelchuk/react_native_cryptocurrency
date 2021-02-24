@@ -1,7 +1,9 @@
-import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import { COLORS, FONTS, SIZES } from '../../constants'
-import { shadow } from '../../styles/VictoryCustomTheme'
+import React from 'react';
+import {
+  View, Text, StyleSheet, TouchableOpacity
+} from 'react-native';
+import { COLORS, FONTS, SIZES } from '../../constants';
+import { shadow } from '../../styles/VictoryCustomTheme';
 
 const Notice = () => {
   const styles = StyleSheet.create({
@@ -31,12 +33,12 @@ const Notice = () => {
       color: COLORS.green,
       ...FONTS.h3,
     }
-  })
+  });
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Investing Safety</Text>
       <Text style={styles.text}>
-        It's very difficult to time an investment,
+        It&#39;s very difficult to time an investment,
         expecially when the market is volatile. Learn how to
         use dollar cost averaging to your advantage.
       </Text>
@@ -47,7 +49,7 @@ const Notice = () => {
         <Text style={styles.buttonText}>Learn More</Text>
       </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
-export default Notice
+export default Notice;

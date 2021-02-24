@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import {
+  View, Text, StyleSheet, FlatList
+} from 'react-native';
 import { SIZES, COLORS, FONTS } from '../../../constants';
 import TrendingItem from './TrendingItem';
 
-const TrendingList = ({trending}) => {
-
+const TrendingList = ({ trending }) => {
   const styles = StyleSheet.create({
     trendingContainer: {
       position: 'absolute',
@@ -18,7 +19,7 @@ const TrendingList = ({trending}) => {
     list: {
       marginTop: SIZES.base,
     }
-  })
+  });
 
   return (
     <View style={styles.trendingContainer}>
@@ -26,13 +27,13 @@ const TrendingList = ({trending}) => {
       <FlatList
         contentContainerStyle={styles.list}
         data={trending}
-        keyExtractor={item => `${item.id}`}
+        keyExtractor={(item) => `${item.id}`}
         horizontal
         showsHorizontalScrollIndicator={false}
-        renderItem={item => <TrendingItem value={item} />}
+        renderItem={(item) => <TrendingItem value={item} />}
       />
     </View>
-  )
-}
+  );
+};
 
-export default TrendingList
+export default TrendingList;

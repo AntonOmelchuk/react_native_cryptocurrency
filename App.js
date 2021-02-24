@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
-import { CryptoDetail, Transaction } from "./screens";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen';
+import { CryptoDetail, Transaction } from './screens';
 
-import Tabs from "./navigation/tabs";
+import Tabs from './navigation/tabs';
 
 const Stack = createStackNavigator();
 
 const App = () => {
-
   useEffect(() => {
-    SplashScreen.hide()
-  }, [])
+    SplashScreen.hide();
+  }, []);
 
   return (
     <NavigationContainer>
@@ -20,7 +19,7 @@ const App = () => {
         screenOptions={{
           headerShown: false
         }}
-        initialRouteName={'Home'}
+        initialRouteName="Home"
       >
         <Stack.Screen
           name="Home"
@@ -36,7 +35,7 @@ const App = () => {
         />
       </Stack.Navigator>
     </NavigationContainer>
-  )
-}
+  );
+};
 
 export default App;

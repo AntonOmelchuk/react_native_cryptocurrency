@@ -1,9 +1,13 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
-import { COLORS, SIZES, FONTS, icons} from '../../constants'
-import { shadow } from '../../styles/VictoryCustomTheme'
+import React from 'react';
+import {
+  View, Text, Image, StyleSheet, TouchableOpacity
+} from 'react-native';
+import {
+  COLORS, SIZES, FONTS, icons
+} from '../../constants';
+import { shadow } from '../../styles/VictoryCustomTheme';
 
-const PriceAlert = ({customContainerStyle}) => {
+const PriceAlert = ({ customContainerStyle }) => {
   const styles = StyleSheet.create({
     container: {
       flexDirection: 'row',
@@ -22,10 +26,6 @@ const PriceAlert = ({customContainerStyle}) => {
       width: 30,
       height: 30,
     },
-    textContainer: {
-      flex: 1,
-      marginLeft: SIZES.radius
-    },
     h4: {
       ...FONTS.h4
     },
@@ -37,12 +37,12 @@ const PriceAlert = ({customContainerStyle}) => {
       height: 25,
       tintColor: COLORS.gray,
     }
-  })
+  });
 
   return (
     <TouchableOpacity style={styles.container}>
       <Image
-        source={icons.notification_color}
+        source={icons.notificationColor}
         style={styles.image}
       />
       <View>
@@ -54,7 +54,7 @@ const PriceAlert = ({customContainerStyle}) => {
         style={styles.arrowIcon}
       />
     </TouchableOpacity>
-  )
-}
+  );
+};
 
-export default  PriceAlert
+export default PriceAlert;

@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { SIZES, COLORS, FONTS, dummyData } from '../../../constants';
+import {
+  SIZES, COLORS, FONTS, dummyData
+} from '../../../constants';
 
 const HeaderContent = () => {
   const styles = StyleSheet.create({
@@ -21,15 +23,22 @@ const HeaderContent = () => {
       color: COLORS.white,
       ...FONTS.body5
     },
-  })
+  });
 
   return (
     <View style={styles.content}>
       <Text style={styles.portfolioText}>Your Portfolio Balance</Text>
-      <Text style={styles.balanceText}>${dummyData.portfolio.balance}</Text>
-      <Text style={styles.changesText}>{dummyData.portfolio.changes} Last 24 hours</Text>
-  </View>
-  )
-}
+      <Text style={styles.balanceText}>
+        $
+        {dummyData.portfolio.balance}
+      </Text>
+      <Text style={styles.changesText}>
+        {dummyData.portfolio.changes}
+        {' '}
+        Last 24 hours
+      </Text>
+    </View>
+  );
+};
 
-export default HeaderContent
+export default HeaderContent;
