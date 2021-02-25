@@ -45,10 +45,7 @@ const Header = ({ trending }) => {
         style={styles.imgBg}
       >
         <View style={styles.headerBar}>
-          <TouchableOpacity
-            style={styles.headerBtn}
-            onPresee={() => {}}
-          >
+          <TouchableOpacity style={styles.headerBtn}>
             <Image
               source={icons.notification_white}
               style={styles.icon}

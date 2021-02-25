@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
   View, Text, Image, StyleSheet, TouchableOpacity
@@ -46,8 +47,16 @@ const TrendingItem = ({ value }) => {
       ...FONTS.h3
     }
   });
+
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate('CryptoDetail', {
+        currency: item,
+      })}
+    >
       <View style={styles.row}>
         <View>
           <Image
