@@ -1,31 +1,24 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-  SafeAreaView
-} from 'react-native';
-import {
-  dummyData, COLORS, SIZES, FONTS, icons
-} from '../../constants';
-import { shadow } from '../../styles/VictoryCustomTheme';
+import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { COLORS } from '../../constants';
+import Chart from './components/Chart';
 import Header from './components/Header';
 
-const CryptoDetail = ({ navigation }) => {
+const CryptoDetail = ({ route }) => {
+  const { currency } = route.params;
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: COLORS.lightGray,
+      backgroundColor: COLORS.lightGray1,
     },
-    shadow: {
-      ...shadow
-    }
   });
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header right />
+      <ScrollView>
+        <Chart chartInfo={currency} />
+      </ScrollView>
     </SafeAreaView>
   );
 };

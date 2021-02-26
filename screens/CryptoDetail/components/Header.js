@@ -7,7 +7,7 @@ import {
   COLORS, FONTS, icons, SIZES
 } from '../../../constants';
 
-const Header = () => {
+const Header = ({ right }) => {
   const navigation = useNavigation();
 
   const styles = StyleSheet.create({
@@ -45,7 +45,7 @@ const Header = () => {
   });
 
   return (
-    <View stlye={styles.header}>
+    <View style={styles.header}>
       <View style={styles.container}>
         <TouchableOpacity
           style={styles.button}
@@ -55,11 +55,13 @@ const Header = () => {
           <Text style={styles.iconText}>Back</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.section}>
-        <TouchableOpacity>
-          <Image source={icons.star} style={styles.starIcon} />
-        </TouchableOpacity>
-      </View>
+      {right && (
+        <View style={styles.section}>
+          <TouchableOpacity>
+            <Image source={icons.star} style={styles.starIcon} />
+          </TouchableOpacity>
+        </View>
+      )}
     </View>
   );
 };
