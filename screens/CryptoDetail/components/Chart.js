@@ -9,6 +9,8 @@ import CurrencyLabel from '../../../components/CurrencyLabel/CurrencyLabel';
 import { COLORS, FONTS, SIZES } from '../../../constants';
 import { shadow } from '../../../styles/VictoryCustomTheme';
 import VictoryCustomTheme from '../../../styles';
+import OptionButtons from './OptionButtons';
+import Dots from './Dots';
 
 const Chart = ({ chartInfo }) => {
   const {
@@ -17,7 +19,7 @@ const Chart = ({ chartInfo }) => {
 
   const scrollX = new Animated.Value(0);
   const charts = [{ id: 1 }, { id: 2 }, { id: 3 }];
-  console.log(scrollX);
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -48,7 +50,7 @@ const Chart = ({ chartInfo }) => {
     },
     chartContainer: {
       marginTop: -25
-    }
+    },
   });
 
   const lineStyles = {
@@ -133,6 +135,8 @@ const Chart = ({ chartInfo }) => {
             </View>
           ))}
         </Animated.ScrollView>
+        <OptionButtons />
+        <Dots dots={charts} scrollX={scrollX} />
       </View>
     </View>
   );
