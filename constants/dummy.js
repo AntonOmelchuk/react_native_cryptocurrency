@@ -12,9 +12,9 @@ export const trendingCurrencies = [
     amount: '29,455.74',
     changes: '+7.24%',
     type: 'I', // I - Increased, D - Decreased
-    description: `Bitcoin is a cryptocurrency invented in 2008 by an\n
-        unknown person or group of people using the name Satoshi Nakamoto.
-        The currency began use in 2009 when its implementation was released as open-source software.`,
+    description: 'Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people'
+    + 'using the name Satoshi Nakamoto. The currency began use in 2009 when its implementation'
+    + 'was released as open-source software',
     chartData: [
       { x: 1, y: 2.5 },
       { x: 1.5, y: 2 },
@@ -112,10 +112,9 @@ export const trendingCurrencies = [
     amount: '919.03',
     changes: '-0.73%',
     type: 'D',
-    description: `Ethereum is a decentralized, open-source blockchain featuring
-        smart contract functionality. Ether is the native cryptocurrency
-        of the platform. It is the second-largest cryptocurrency by market
-        capitalization, after Bitcoin. Ethereum is the most actively used blockchain.`,
+    description: 'Ethereum is a decentralized, open-source blockchain featuring smart contract functionality.'
+    + 'Ether is the native cryptocurrency of the platform. It is the second-largest cryptocurrency by market'
+    + 'capitalization, after Bitcoin. Ethereum is the most actively used blockchain.',
     chartData: [
       { x: 1, y: 2 },
       { x: 1.5, y: 2.3 },
@@ -213,9 +212,9 @@ export const trendingCurrencies = [
     amount: '118.33',
     changes: '+1.73%',
     type: 'I',
-    description: `Litecoin is a peer-to-peer cryptocurrency and open-source software project
-        released under the MIT/X11 license. Litecoin was an early bitcoin spinoff or altcoin,
-        starting in October 2011. In technical details, Litecoin is nearly identical to Bitcoin.`,
+    description: 'Litecoin is a peer-to-peer cryptocurrency and open-source software project released under the'
+    + 'MIT/X11 license. Litecoin was an early bitcoin spinoff or altcoin, starting in October 2011. In technical details,'
+    + 'Litecoin is nearly identical to Bitcoin.',
     chartData: [
       { x: 1, y: 2.6 },
       { x: 1.5, y: 2.2 },
@@ -312,8 +311,8 @@ export const trendingCurrencies = [
     amount: '0.24',
     changes: '-0.51%',
     type: 'D',
-    description: `Ripple is a real-time gross settlement system, currency exchange and
-        remittance network created by Ripple Labs Inc., a US-based technology company.`,
+    description: 'Ripple is a real-time gross settlement system, currency exchange and remittance network created'
+    + 'by Ripple Labs Inc., a US-based technology company.',
     chartData: [
       { x: 1, y: 2.3 },
       { x: 1.5, y: 2.3 },
@@ -504,7 +503,7 @@ const chartOptions = [
 ];
 
 const dummyData = {
-  portfolio, trendingCurrencies, transactionHistory, chartOptions 
+  portfolio, trendingCurrencies, transactionHistory, chartOptions
 };
 
 export default dummyData;
