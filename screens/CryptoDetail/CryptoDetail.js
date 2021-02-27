@@ -5,7 +5,7 @@ import { COLORS, SIZES } from '../../constants';
 import About from './components/About';
 import Buy from './components/Buy';
 import Chart from './components/Chart';
-import Header from './components/Header';
+import Header from '../../components/Header/Header';
 
 const CryptoDetail = ({ route }) => {
   const { currency: currentCurrency } = route.params;

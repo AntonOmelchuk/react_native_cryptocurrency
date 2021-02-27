@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from '../screens/Home';
+import Home from '../screens/Home/Home';
 import { COLORS, FONTS, icons } from '../constants';
 import TabBarButton from './TabBarButton';
 

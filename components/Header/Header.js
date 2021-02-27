@@ -4,8 +4,8 @@ import {
   View, Text, StyleSheet, TouchableOpacity, Image
 } from 'react-native';
 import {
-  COLORS, FONTS, icons, SIZES
-} from '../../../constants';
+  SIZES, COLORS, FONTS, icons 
+} from '../../constants';
 
 const Header = ({ right }) => {
   const navigation = useNavigation();

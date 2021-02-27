@@ -6,7 +6,7 @@ import Header from './components/Header';
 import { dummyData } from '../../constants';
 import PriceAlert from '../../components/Alert/PriceAlert';
 import Notice from '../../components/Notice/Notice';
-import TransactionHistory from './components/TransactionHistory';
+import TransactionHistory from '../../components/TransactionHistory/TransactionHistory';
 
 const Home = () => {
   useEffect(() => {

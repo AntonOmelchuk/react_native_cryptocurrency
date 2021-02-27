@@ -2,8 +2,8 @@ import React from 'react';
 import {
   View, Text, StyleSheet, FlatList
 } from 'react-native';
-import { COLORS, FONTS, SIZES } from '../../../constants';
-import { shadow } from '../../../styles/VictoryCustomTheme';
+import { COLORS, FONTS, SIZES } from '../../constants';
+import { shadow } from '../../styles/VictoryCustomTheme';
 import TransactionItem from './TransactionItem';
 
 const TransactionHistory = ({ transactionHistory }) => {

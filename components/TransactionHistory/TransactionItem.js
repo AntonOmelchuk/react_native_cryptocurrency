@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import {
   COLORS, FONTS, icons, SIZES
-} from '../../../constants';
+} from '../../constants';
 
 const TransactionItem = ({ item }) => {
   const {
